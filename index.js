@@ -5,6 +5,7 @@ const recipeContainer = document.querySelector(".recipe-container")
 const recipeDetailsContainer = document.querySelector(
    ".recipe-details-container"
 )
+const recipeDetailsSection = document.querySelector(".recipe-details-section")
 const welcomeSection = document.querySelector(".welcome")
 
 // Event Listeners
@@ -18,7 +19,6 @@ getCategories()
 
 // Welcome section
 function showWelcome() {
-   // Populate Dropdowns
    recipeDetailsContainer.style.display = "none"
 }
 
@@ -73,6 +73,7 @@ function getRecipesByCategory(e) {
 function renderAllRecipes(recipes) {
    welcomeSection.style.display = "none"
    recipeDetailsContainer.style.display = "none"
+   recipeContainer.style.display = "block"
    recipeContainer.replaceChildren()
 
    recipes.forEach(recipe => {
@@ -109,12 +110,12 @@ function getRecipeDetails(e, recipeId) {
    fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${recipeId}`)
       .then(r => r.json())
       .then(recipe => renderRecipeDetails(recipe.meals[0]))
-      .catch(error => console.log(error))
+      .catch(error => alert(error))
 }
 
 function renderRecipeDetails(recipeDetails) {
-   recipeContainer.replaceChildren()
    recipeDetailsContainer.style.display = "grid"
+   recipeContainer.replaceChildren()
 
    const {
       strMeal: recipe,
