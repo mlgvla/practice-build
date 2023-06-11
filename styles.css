@@ -6,17 +6,26 @@ html {
 }
 
 
+/* Card Styling */
 .card {
     max-width: 30%;
     border: solid 1px;
     margin: 20px;
     padding: 10px;
+
+    /* the above is the initial styling for a card */
+    /* comment the final styling in later */
 }
 
 .card img {
     width: 100%;
 }
 
+/* Grid Container styling w media queries */
+.recipe-container{
+    display :grid;
+}
+
 .recipe-details-container {
-    display: block;
+    display: grid;
 }

@@ -22,6 +22,8 @@
 - [ ]   Add Random Recipe as Featured Recipe on Welcome Section
 - [ ]   Add event to return to original screen
 
+## Stretch
+- [ ]   Get recipe by main ingredient
 
 # Project Requirements:
 
@@ -39,7 +41,7 @@
 ## MVP
 As a user, I will be able to:
 - [x]   View recipes by area (cuisine) or category (dietary)
-- [ ]   Get the details of a recipe by clicking on it
+- [x]   Get the details of a recipe by clicking on it
 
 ## Strech Goals
 - [ ]   View recipes by main ingredient (form or search input)

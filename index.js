@@ -73,7 +73,7 @@ function getRecipesByCategory(e) {
 function renderAllRecipes(recipes) {
    welcomeSection.style.display = "none"
    recipeDetailsContainer.style.display = "none"
-   recipeContainer.style.display = "block"
+   recipeContainer.style.display = "grid"
    recipeContainer.replaceChildren()
 
    recipes.forEach(recipe => {
