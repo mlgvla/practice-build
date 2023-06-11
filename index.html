@@ -14,22 +14,29 @@
    <body>
       <header>
          <h1>What's Cooking?</h1>
-         <!-- Dropdowns -->
-         <select name="cuisines" id="cuisines">
-            <option value="">Select a Cuisine</option>
-         </select>
-         <select name="category" id="category">
-            <option value="">Select a Category</option>
-         </select>
+         <!-- Search -->
+         <section class="search">
+            <select name="cuisines" id="cuisines">
+               <option value="">Select a Cuisine</option>
+            </select>
+            <select name="category" id="category">
+               <option value="">Select a Category</option>
+            </select>
+         </section>
          <!-- --------- -->
       </header>
-
-      <!-- Recipe Section -->
-        <section class="recipe-section">
+      <main>
+         <!-- Recipe Section -->
+         <section class="recipe-section">
             <h1 class="selection-heading"></h1>
             <div class="recipe-container"></div>
-        </section>
-      <!-- ---------------- -->
-      <script src="./index.js"></script>
+         </section>
+         <!-- ---------------- -->
+
+         <!-- Recipe Details Section -->
+         <section class="recipe-details-section"></section>
+         <!-- ---------------------- -->
+         <script src="./index.js"></script>
+      </main>
    </body>
 </html>

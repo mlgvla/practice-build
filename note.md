@@ -13,6 +13,12 @@
 
 ## Step 3
 - [ ]   Renders temporary recipe detail card
+  
+## Step 4
+- [ ]   Parse Ingredients
+- [ ]   Style Cards
+- [ ]   Style Containers
+- [ ]   Add Welcome Section
 
 
 
