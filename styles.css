@@ -16,3 +16,7 @@ html {
 .card img {
     width: 100%;
 }
+
+.recipe-details-container {
+    display: block;
+}

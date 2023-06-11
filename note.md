@@ -9,22 +9,18 @@
   
 ## Step 2
 - [x]   Renders temporary cards for retrieved recipes
-- [ ]   Adds event listener on card click to retrieve recipe details
+- [x]   Adds event listener on card click to retrieve recipe details
 
 ## Step 3
-- [ ]   Renders temporary recipe detail card
+- [x]   Renders temporary recipe detail card
+- [x]   Add Welcome Section
   
 ## Step 4
 - [ ]   Parse Ingredients
 - [ ]   Style Cards
 - [ ]   Style Containers
-- [ ]   Add Welcome Section
-
-
-
-
-
-
+- [ ]   Add Random Recipe as Featured Recipe on Welcome Section
+- [ ]   Add event to return to original screen
 
 
 # Project Requirements:
@@ -32,7 +28,7 @@
 - [x]   Your app must be an HTML/CSS/JS frontend that accesses data from a public API or from your own API built using json-server and a db.json file.
 - [x]   Your API or db.json should return a collection of at least 5 objects with each object having at least 3 attributes.
 - [x]   Single HTML file
-- [ ]   2 DISTINCT event listeners
+- [x]   2 DISTINCT event listeners
 - [x]   One instance of array iteration using available array methods(map, forEach, filter, etc.)
 - [x]   Each event listener must have its own callback function using .addEventListener
 
