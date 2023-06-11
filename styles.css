@@ -2,7 +2,7 @@
 
 html {
     font-family: 'Poppins', sans-serif;
-    background-color: antiquewhite;
+    background-color: rgb(225, 234, 239);
 }
 
 
@@ -12,6 +12,7 @@ html {
     border: solid 1px;
     margin: 20px;
     padding: 10px;
+    background-color: antiquewhite;
 
     /* the above is the initial styling for a card */
     /* comment the final styling in later */

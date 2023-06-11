@@ -17,44 +17,6 @@ showWelcome()
 getCuisines()
 getCategories()
 
-// Welcome section
-function showWelcome() {
-   recipeDetailsContainer.style.display = "none"
-}
-
-// Dropdown Functions
-function getCuisines() {
-   fetch("https://www.themealdb.com/api/json/v1/1/list.php?a=list")
-      .then(r => r.json())
-      .then(cuisines => renderCuisineOptions(cuisines.meals))
-      .catch(error => console.log(error))
-}
-
-function getCategories() {
-   fetch("https://www.themealdb.com/api/json/v1/1/list.php?c=list")
-      .then(r => r.json())
-      .then(categories => renderCategoryOptions(categories.meals))
-      .catch(error => console.log(error))
-}
-
-function renderCuisineOptions(cuisines) {
-   cuisines.forEach(cuisine => {
-      const option = document.createElement("option")
-      option.value = cuisine.strArea
-      option.textContent = cuisine.strArea
-      cuisineSelect.append(option)
-   })
-}
-
-function renderCategoryOptions(categories) {
-   categories.forEach(category => {
-      const option = document.createElement("option")
-      option.value = category.strCategory
-      option.textContent = category.strCategory
-      categorySelect.append(option)
-   })
-}
-
 // Recipe Collection Functions
 function getRecipesByCuisine(e) {
    const cuisine = e.target.value
@@ -142,14 +104,20 @@ function renderRecipeDetails(recipeDetails) {
    imageArea.append(recipeImage)
 
    // Ingredients Area
+   const ingredients = parseIngredients(recipeDetails)
+
+   const ingredientPs = ingredients.map((ingredient) => {
+     const ingredientP = document.createElement("p")
+     ingredientP.textContent = ingredient
+     return ingredientP
+   })
+
    const ingredientsTitle = document.createElement("h3")
    ingredientsTitle.textContent = "Ingredients"
    ingredientsTitle.style.textDecoration = "underline"
    const ingredientsArea = document.querySelector(".recipe-details-ingredients")
-   const ingredientsList = document.createElement("p")
    ingredientsArea.replaceChildren()
-   ingredientsList.textContent = "<List of Ingredients will go here>"
-   ingredientsArea.append(ingredientsTitle, ingredientsList)
+   ingredientsArea.append(ingredientsTitle, ...ingredientPs)
 
    // Directions Area
    const directionsTitle = document.createElement("h3")
