@@ -1,10 +1,10 @@
 # TODO
 ## Step 1
-- [ ]   Create HTML for cuisine dropdown
-- [ ]   Create HTML for category dropdown
-- [ ]   Create option tags for cuisine dropdown and append
-- [ ]   Create option tags for category dropdown and append
-- [ ]   Create event listener for cuisine dropdown
+- [x]   Create HTML for cuisine dropdown
+- [x]   Create HTML for category dropdown
+- [x]   Create option tags for cuisine dropdown and append
+- [x]   Create option tags for category dropdown and append
+- [x]   Create event listener for cuisine dropdown
 - [ ]   Create event listener for category dropdown
   
 ## Step 2

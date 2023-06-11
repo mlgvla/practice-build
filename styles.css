@@ -4,3 +4,15 @@ html {
     font-family: 'Poppins', sans-serif;
     background-color: antiquewhite;
 }
+
+
+.card {
+    max-width: 30%;
+    border: solid 1px;
+    margin: 20px;
+    padding: 10px;
+}
+
+.card img {
+    width: 100%;
+}
