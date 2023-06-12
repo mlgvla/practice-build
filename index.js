@@ -2,6 +2,7 @@
 const cuisineSelect = document.querySelector("#cuisines")
 const categorySelect = document.querySelector("#category")
 const recipeContainer = document.querySelector(".recipe-container")
+const selectionH1 = document.querySelector(".selection-heading")
 const recipeDetailsContainer = document.querySelector(
    ".recipe-details-container"
 )
@@ -28,6 +29,7 @@ function getRecipesByCuisine(e) {
    fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?a=${cuisine}`)
       .then(r => r.json())
       .then(recipes => renderAllRecipes(recipes.meals))
+      .catch(error => alert(error))
 }
 
 function getRecipesByCategory(e) {
@@ -35,6 +37,7 @@ function getRecipesByCategory(e) {
    fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${category}`)
       .then(r => r.json())
       .then(recipes => renderAllRecipes(recipes.meals))
+      .catch(error => alert(error))
 }
 
 function getRecipesByIngredient(e) {
@@ -49,6 +52,7 @@ function getRecipesByIngredient(e) {
             renderAllRecipes(recipes.meals)
          }
       })
+      .catch(error => alert(error))
 }
 
 function renderAllRecipes(recipes) {
@@ -56,6 +60,8 @@ function renderAllRecipes(recipes) {
    recipeDetailsContainer.style.display = "none"
    recipeContainer.style.display = "grid"
    recipeContainer.replaceChildren()
+
+   selectionH1.textContent = cuisineSelect.value || categorySelect.value
 
    recipes.forEach(recipe => {
       renderRecipeCard(recipe)

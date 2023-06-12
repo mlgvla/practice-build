@@ -5,6 +5,7 @@ function showWelcome() {
    welcomeSection.style.display = "grid"
    featuredRecipeDiv.innerHTML = ""
    featuredRecipeDiv.textContent = "Featured Recipe"
+   selectionH1.innerHTML = ""
    getFeaturedRecipe()
 }
 
@@ -20,14 +21,14 @@ function getCuisines() {
    fetch("https://www.themealdb.com/api/json/v1/1/list.php?a=list")
       .then(r => r.json())
       .then(cuisines => renderCuisineOptions(cuisines.meals))
-      .catch(error => console.log(error))
+      .catch(error => alert(error))
 }
 
 function getCategories() {
    fetch("https://www.themealdb.com/api/json/v1/1/list.php?c=list")
       .then(r => r.json())
       .then(categories => renderCategoryOptions(categories.meals))
-      .catch(error => console.log(error))
+      .catch(error => alert(error))
 }
 
 function renderCuisineOptions(cuisines) {

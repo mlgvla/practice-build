@@ -23,7 +23,7 @@
 - [x]   Add event to return to original screen
 
 ## Stretch
-- [ ]   Get recipe by main ingredient
+- [x]   Get recipe by ingredient
 
 # Project Requirements:
 
@@ -44,7 +44,7 @@ As a user, I will be able to:
 - [x]   Get the details of a recipe by clicking on it
 
 ## Strech Goals
-- [ ]   View recipes by main ingredient (form or search input)
+- [x]   View recipes by main ingredient (form or search input)
 - [ ]   View recipes by name (form or search input)
 - [ ]   Save a recipe to a db.json file (would require deployment or json-server and db.json on Render)  
 
