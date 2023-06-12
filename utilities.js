@@ -1,6 +1,10 @@
 // Welcome section
 function showWelcome() {
    recipeDetailsContainer.style.display = "none"
+   recipeContainer.style.display = "none"
+   welcomeSection.style.display = "grid"
+   featuredRecipeDiv.innerHTML = ""
+   featuredRecipeDiv.textContent = "Featured Recipe"
    getFeaturedRecipe()
 }
 

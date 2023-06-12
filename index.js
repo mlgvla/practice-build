@@ -8,10 +8,12 @@ const recipeDetailsContainer = document.querySelector(
 const recipeDetailsSection = document.querySelector(".recipe-details-section")
 const welcomeSection = document.querySelector(".welcome")
 const featuredRecipeDiv = document.querySelector(".featured")
+const mainTitle = document.querySelector(".main-title")
 
 // Event Listeners
 cuisineSelect.addEventListener("change", getRecipesByCuisine)
 categorySelect.addEventListener("change", getRecipesByCategory)
+mainTitle.addEventListener("click", showWelcome)
 
 // Function Calls
 showWelcome()

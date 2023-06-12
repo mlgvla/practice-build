@@ -11,6 +11,10 @@ html {
    align-items: center;
 }
 
+.main-title {
+    cursor: pointer;
+}
+
 .welcome {
    font-size: larger;
    max-width: 70%;
