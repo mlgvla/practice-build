@@ -20,7 +20,7 @@
 - [x]   Style Cards
 - [x]   Style Containers
 - [x]   Add Random Recipe as Featured Recipe on Welcome Section
-- [ ]   Add event to return to original screen
+- [x]   Add event to return to original screen
 
 ## Stretch
 - [ ]   Get recipe by main ingredient

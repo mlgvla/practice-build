@@ -143,6 +143,7 @@ function renderRecipeDetails(recipeDetails) {
    // Resource Area
    const youTubeLinkATag = document.createElement("a")
    youTubeLinkATag.href = youTubeLink
+   youTubeLinkATag.target = "_blank"
    youTubeLinkATag.text = `How to make ${recipe} on YouTube.`
    const cuisineCategory = document.createElement("p")
    cuisineCategory.textContent = `(Cuisine: ${cuisine}, Category: ${category})`
