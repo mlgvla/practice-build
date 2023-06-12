@@ -1,6 +1,14 @@
 // Welcome section
 function showWelcome() {
    recipeDetailsContainer.style.display = "none"
+   getFeaturedRecipe()
+}
+
+function getFeaturedRecipe() {
+    fetch("https://www.themealdb.com/api/json/v1/1/random.php")
+    .then(r => r.json())
+    .then(recipe => renderRecipeCard(recipe.meals[0], true))
+    .catch(error => alert(error))
 }
 
 // Dropdown Functions

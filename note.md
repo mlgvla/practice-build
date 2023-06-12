@@ -16,10 +16,10 @@
 - [x]   Add Welcome Section
   
 ## Step 4
-- [ ]   Parse Ingredients
-- [ ]   Style Cards
-- [ ]   Style Containers
-- [ ]   Add Random Recipe as Featured Recipe on Welcome Section
+- [x]   Parse Ingredients
+- [x]   Style Cards
+- [x]   Style Containers
+- [x]   Add Random Recipe as Featured Recipe on Welcome Section
 - [ ]   Add event to return to original screen
 
 ## Stretch

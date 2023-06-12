@@ -7,6 +7,7 @@ const recipeDetailsContainer = document.querySelector(
 )
 const recipeDetailsSection = document.querySelector(".recipe-details-section")
 const welcomeSection = document.querySelector(".welcome")
+const featuredRecipeDiv = document.querySelector(".featured")
 
 // Event Listeners
 cuisineSelect.addEventListener("change", getRecipesByCuisine)
@@ -45,7 +46,7 @@ function renderAllRecipes(recipes) {
    categorySelect.value = ""
 }
 
-function renderRecipeCard(recipe) {
+function renderRecipeCard(recipe, featured = false) {
    const {
       idMeal: recipeId,
       strMeal: recipeName,
@@ -59,12 +60,19 @@ function renderRecipeCard(recipe) {
    const image = document.createElement("img")
    image.src = recipeImage
 
+   const recipeTitleDiv = document.createElement("div")
+   recipeTitleDiv.classList.add("recipe-title")
    const title = document.createElement("h3")
    title.textContent = recipeName
 
-   cardDiv.append(image, title)
+   recipeTitleDiv.append(title)
+   cardDiv.append(image, recipeTitleDiv)
 
-   recipeContainer.append(cardDiv)
+   if (featured) {
+      featuredRecipeDiv.append(cardDiv)
+   } else {
+      recipeContainer.append(cardDiv)
+   }
 }
 
 // Recipe Detail Functions
@@ -76,6 +84,7 @@ function getRecipeDetails(e, recipeId) {
 }
 
 function renderRecipeDetails(recipeDetails) {
+   welcomeSection.style.display = "none"
    recipeDetailsContainer.style.display = "grid"
    recipeContainer.replaceChildren()
 
@@ -106,10 +115,10 @@ function renderRecipeDetails(recipeDetails) {
    // Ingredients Area
    const ingredients = parseIngredients(recipeDetails)
 
-   const ingredientPs = ingredients.map((ingredient) => {
-     const ingredientP = document.createElement("p")
-     ingredientP.textContent = ingredient
-     return ingredientP
+   const ingredientPs = ingredients.map(ingredient => {
+      const ingredientP = document.createElement("p")
+      ingredientP.textContent = ingredient
+      return ingredientP
    })
 
    const ingredientsTitle = document.createElement("h3")
