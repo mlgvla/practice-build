@@ -3,7 +3,7 @@ function showWelcome() {
    recipeDetailsContainer.style.display = "none"
    recipeContainer.style.display = "none"
    welcomeSection.style.display = "grid"
-   featuredRecipeDiv.innerHTML = ""
+   featuredRecipeDiv.replaceChildren()
    featuredRecipeDiv.textContent = "Featured Recipe"
    selectionH1.textContent = ""
    getFeaturedRecipe()
