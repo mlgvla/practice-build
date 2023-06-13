@@ -5,7 +5,7 @@ function showWelcome() {
    welcomeSection.style.display = "grid"
    featuredRecipeDiv.innerHTML = ""
    featuredRecipeDiv.textContent = "Featured Recipe"
-   selectionH1.innerHTML = ""
+   selectionH1.textContent = ""
    getFeaturedRecipe()
 }
 

@@ -42,6 +42,7 @@ function getRecipesByCategory(e) {
 
 function getRecipesByIngredient(e) {
    const ingredient = e.target.value
+   if (!ingredient) return
    fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?i=${ingredient}`)
       .then(r => r.json())
       .then(recipes => {
@@ -111,6 +112,7 @@ function renderRecipeDetails(recipeDetails) {
    welcomeSection.style.display = "none"
    recipeDetailsContainer.style.display = "grid"
    recipeContainer.replaceChildren()
+   selectionH1.textContent = ""
 
    const {
       strMeal: recipe,
