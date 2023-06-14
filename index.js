@@ -175,3 +175,21 @@ function renderRecipeDetails(recipeDetails) {
    resourcesArea.replaceChildren()
    resourcesArea.append(youTubeLinkATag, cuisineCategory)
 }
+
+function parseIngredients(recipe) {
+   const ingredientArray = []
+
+   for (let i = 1; i < 21; i++) {
+      let measure = recipe["strMeasure" + i.toString()]
+      let ingredient = recipe["strIngredient" + i.toString()]
+      if (ingredient === "" || ingredient === null) {
+         ingredient = ""
+         measure = ""
+         continue
+      }
+      let ingredientString = measure.trim() + " " + ingredient.trim()
+      ingredientArray.push(ingredientString)
+   }
+
+   return ingredientArray
+}

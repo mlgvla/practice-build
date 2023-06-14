@@ -49,19 +49,4 @@ function renderCategoryOptions(categories) {
    })
 }
 
-function parseIngredients(recipe) {
-   const ingredientArray = []
 
-   for (let i = 1; i < 21; i++) {
-      let measure = recipe["strMeasure" + i.toString()]
-      let ingredient = recipe["strIngredient" + i.toString()]
-      if (ingredient === "" || ingredient === null) {
-         ingredient = ""
-         continue
-      }
-      let ingredientString = measure.trim() + " " + ingredient.trim()
-      ingredientArray.push(ingredientString)
-   }
-
-   return ingredientArray
-}
